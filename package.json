@@ -9,7 +9,9 @@
     "categoriaSeed": "node ./src/utils/seeds/categorias.seed.js",
     "temporadaSeed": "node ./src/utils/seeds/temporadas.seed.js",
     "competicionTipoSeed": "node ./src/utils/seeds/competicion-tipo.seed.js",
-    "categoriaTipoSeed": "node ./src/utils/seeds/categoria-tipo.seed.js"
+    "competicionSeed": "node ./src/utils/seeds/competiciones.seed.js",
+    "categoriaTipoSeed": "node ./src/utils/seeds/categoria-tipo.seed.js",
+    "equipoSeed": "node ./src/utils/seeds/equipos.seed.js"
     },
   "keywords": [],
   "author": "",
