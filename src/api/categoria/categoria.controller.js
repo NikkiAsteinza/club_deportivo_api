@@ -8,5 +8,16 @@ const getCategorias = async (req,res,next)=>{
         return next(error);
     }
 }
+const setCategoria = async (req, res, next) => {
+    try {
+        const {nombre, tipo} = req.body;
+         const newCategoria = new Categoria({nombre, tipo});
+          await newCategoria.save().then(() => {
+            return res.status(200).json("message : categoria creada:"+nombre);
+          });
 
-module.exports = {getCategorias}
+    } catch (error) {
+        return next(error);
+    }
+}
+module.exports = {getCategorias,setCategoria}

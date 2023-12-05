@@ -1,10 +1,11 @@
 require("dotenv").config();
 const express = require("express");
-
 const cors = require("cors");
 const PORT = process.env.PORT;
+
 // Get routes
 const categoriaRoutes = require("./src/api/categoria/categoria.routes.js");
+const categoriaTipoRoutes = require("./src/api/categoria-tipo/categoria-tipo.routes.js");
 const competicionRoutes = require("./src/api/competicion/competicion.routes.js");
 const competicionTiposRoutes = require("./src/api/competicion-tipo/competicion-tipo.routes.js");
 const equipoRoutes = require("./src/api/equipo/equipo.routes.js");
@@ -21,11 +22,6 @@ const jsonParser = bodyParser.json();
  
 // create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-
-
-
-
-
 
 // Mongoose
 //* Me traigo mi base de datos
@@ -46,6 +42,7 @@ server.use(urlencodedParser);
 // Api routes
 
 server.use("/categorias",categoriaRoutes);
+server.use("/categoria-tipos",categoriaTipoRoutes);
 server.use("/competiciones",competicionRoutes);
 server.use("/competicion-tipos",competicionTiposRoutes);
 server.use("/equipos",equipoRoutes);
@@ -69,7 +66,3 @@ server.use("*", (req, res, next) => {
 server.listen(PORT, ()=>{
     console.log("Server listening on http://localhost:"+PORT)
 })
-// Start listening
-server.listen(PORT, () => {
-  console.log("Twist Server is running at http:/localhost:" + PORT);
-});

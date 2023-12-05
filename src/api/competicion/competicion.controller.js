@@ -1,6 +1,6 @@
 const Competicion = require("./competicion.model");
 
-const getCompeticions = async (req,res,next)=>{
+const getCompeticiones = async (req,res,next)=>{
     try{
         const allCompeticiones = await Competicion.find();
         return res.json(allCompeticiones);
@@ -8,5 +8,17 @@ const getCompeticions = async (req,res,next)=>{
         return next(error);
     }
 }
+const setCompeticion =async(req, res, next)=>{
+    try{
+        const{nombre, tipo, temporada, jornadas}= req.body;
+        const newCompeticion = new Competicion({nombre,tipo,temporada,jornadas})
+        
+        await newCompeticion.save().then(()=>{
+            return res.status(200).json("message : competicion creada:"+nombre);
+        });
 
-module.exports = {getCompeticions}
+  } catch (error) {
+      return next(error);
+  }
+}
+module.exports = {getCompeticiones, setCompeticion}

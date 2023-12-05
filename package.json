@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
-  },
+    "dev": "nodemon index.js",
+    "categoriaSeed": "node ./src/utils/seeds/categorias.seed.js",
+    "temporadaSeed": "node ./src/utils/seeds/temporadas.seed.js",
+    "competicionTipoSeed": "node ./src/utils/seeds/competicion-tipo.seed.js",
+    "categoriaTipoSeed": "node ./src/utils/seeds/categoria-tipo.seed.js"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,7 +19,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "moongose": "^1.0.0"
+    "mongoose": "^8.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
