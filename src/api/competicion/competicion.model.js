@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const competicionSchema = mongoose.Schema(
     {
         nombre:{type:String, required: true},
-        tipo:{type:mongoose.Types.ObjectID, ref: "competicion-tipos", required:true},
-        temporada:{type:mongoose.Types.ObjectID, ref: "temporada", required:true},
-        jornadas:{type:Number, required:true}
+        tipo: {type: mongoose.Schema.Types.ObjectId,  ref: 'competicion-tipos', required:true},
+        temporada:{type:mongoose.Schema.Types.ObjectID, ref: "temporada", required:true},
+        jornadas:{type:Number, required:false, default:30}
     },
     {
         timestamps:true,
