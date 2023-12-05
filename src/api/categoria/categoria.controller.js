@@ -10,8 +10,8 @@ const getCategorias = async (req,res,next)=>{
 }
 const setCategoria = async (req, res, next) => {
     try {
-        const {nombre, tipo} = req.body;
-         const newCategoria = new Categoria({nombre, tipo});
+        const {nombre} = req.body;
+         const newCategoria = new Categoria({nombre});
           await newCategoria.save().then(() => {
             return res.status(200).json("message : categoria creada:"+nombre);
           });

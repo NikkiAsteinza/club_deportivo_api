@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const categoriaTipoSchema = mongoose.Schema({
-    nombre:{type:String, required: true},
+    nombre:{type:String, required: true}
 },
 {
     timestamps:true,
