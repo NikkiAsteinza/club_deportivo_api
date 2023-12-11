@@ -12,7 +12,7 @@
     "competicionSeed": "node ./src/utils/seeds/competiciones.seed.js",
     "categoriaTipoSeed": "node ./src/utils/seeds/categoria-tipo.seed.js",
     "equipoSeed": "node ./src/utils/seeds/equipos.seed.js"
-    },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.2"
   },
   "devDependencies": {
