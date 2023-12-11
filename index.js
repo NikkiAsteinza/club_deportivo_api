@@ -13,6 +13,7 @@ const jugadorRoutes = require("./src/api/jugador/jugador.routes.js");
 const noticiaRoutes = require("./src/api/noticia/noticia.routes.js");
 const resultadoRoutes = require("./src/api/resultado/resultado.routes.js");
 const temporadaRoutes = require("./src/api/temporada/temporada.routes.js");
+const userRoutes = require("./src/api/usuario/usuario.routes.js");
 // Init server
 
 // const hbs = require("hbs");
@@ -50,6 +51,7 @@ server.use("/jugadores",jugadorRoutes);
 server.use("/noticias",noticiaRoutes);
 server.use("/resultados",resultadoRoutes);
 server.use("/temporada",temporadaRoutes);
+server.use("/usuario",userRoutes);
 
 server.use("/", (req, res) => {
     res.send("Funcionando");
